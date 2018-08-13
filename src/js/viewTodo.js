@@ -39,13 +39,13 @@ TodoView.prototype.getWrapper = function(id) {
 
 TodoView.prototype.renderEditItem = function (item) {
     let li = this.$todoList.querySelector("[data-todoid='" + item.id + "']");
-    let editInput = li.querySelector(".todo__edit-input");
-    let editButton = li.querySelector(".edit");
+    let editInput = li.querySelector(".main-todo__edit-input");
+    let editButton = li.querySelector(".main-edit");
 
     editInput.style.display = "block";
     editInput.value = item.text;
     editInput.focus();
-    editInput.classList.add("todo__edit-input--active");
+    editInput.classList.add("main-todo__edit-input--active");
 
     editButton.style.display = "none";
 }

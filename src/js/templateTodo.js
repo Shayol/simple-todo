@@ -1,16 +1,19 @@
 function TodoTemplate() {
     this.startTemplate = `<div class='container'>
-                            <input class='main__input' placeholder='add item'></input>
+                            <input class='main__input' placeholder='add item list'></input>
                             <ul class='main-todo'>
                             </ul>
                         </div>`
 
     this.defaultTemplate = `<li class='main-todo__item' data-todoid='{{id}}'>
+                            <div class='main-todo__header'>    
                             <div class='main-todo__content'>
                                 <span class='main-todo__text'> {{text}}  </span> 
                                 <input class='main-todo__edit-input'></input>
                             </div> 
-                            <button class='main-edit'>Edit</button><button class='main-delete'>Delete</button>
+                            <div class='main-delete'>x</div>
+                            <button class='main-edit'>Edit</button>
+                            </div>
                             <div class='items-container'></div>
                             </li>`;
 }

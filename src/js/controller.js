@@ -68,7 +68,7 @@ Controller.prototype.addItem = function(text) {
 }
 
 Controller.prototype.deleteItem = function(id) {
-    this.model.delete(id).then(id => this._filter());
+    this.model.delete(id).then(id => this._filter(true));
 }
 
 Controller.prototype.editItem = function(id) {
