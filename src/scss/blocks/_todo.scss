@@ -1,0 +1,87 @@
+.container {
+    width: 80%;
+    max-width: 645px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.filters {
+    list-style: none;
+    flex-grow: 1;
+}
+
+.filters__item {
+    display: inline-block;
+}
+
+.filters__link {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    border-color: aliceblue;
+    background-color: aliceblue;
+}
+
+.selected {
+    border-color: rgb(113, 113, 155);
+    background-color: rgb(101, 101, 219);
+    color: white;
+}
+
+.todo {
+    list-style: none;
+    padding: 0;
+}
+
+.todo__input {
+    display: block;
+    width: 100%;
+    border-radius: 2px solid (101, 101, 219);
+    padding: 5px 10px;
+}
+
+.todo__item {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.checked {
+    opacity: 0.6;
+}
+
+.todo__content {
+    position: relative;
+    flex-grow: 1;
+}
+
+.todo__edit-input {
+    position: absolute;
+    width: 100%;
+    display: none;
+    top: 0;
+    left: 0;
+}
+.todo__footer {
+    display: flex;
+    justify-items: baseline;
+}
+
+.todo__counter {
+    width: 25%;
+    padding: 10px 20px;
+}
+.todo__count-number {
+    color: goldenrod;
+    font-size: 18px;
+}
+.edit {
+    border-color: aliceblue;;
+    background-color: white;
+    outline: none;
+}
+.delete {
+    border-color: rgba(233, 90, 90, 0.548);
+    background-color: white;
+}
