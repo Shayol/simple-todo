@@ -1,6 +1,5 @@
 function Template() {
-    this.startTemplate = `<div class='container'>
-                            <input class='todo__input' placeholder='add item'></input>
+    this.startTemplate = `<input class='todo__input' placeholder='add item'></input>
                             <ul class='todo'>
                             </ul>
                             <footer class='todo__footer'>
@@ -16,8 +15,7 @@ function Template() {
                                     <a href="#completed" class='filters__link'>Completed</a>
                                 </li>
                             </ul>
-                            </footer>
-                        </div>`
+                            </footer>`
 
     this.defaultTemplate = `<li class='todo__item {{checked-item}}' data-todoid='{{id}}'>
         <input type='checkbox' class='todo__fullfilled' {{checked}}> 

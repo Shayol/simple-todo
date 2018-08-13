@@ -1,27 +1,25 @@
 import "../scss/main.scss";
-import {Store} from "./store.js";
-import {Model} from "./model.js";
-import {Template} from "./template.js";
-import {View} from "./view.js";
-import {Controller} from "./controller.js";
+import {TodoStore} from "./storeTodo.js";
+import {TodoModel} from "./modelTodo.js";
+import {TodoTemplate} from "./templateTodo.js";
+import {TodoView} from "./viewTodo.js";
+import {TodoController} from "./controllerTodo.js";
+
+//TODO - use remove()
 
 window.addEventListener('load', function () {
-    function Todo(name) {
-        this.storage = new Store(name);
-        this.model = new Model(this.storage);
-        this.template = new Template();
-        this.view = new View(this.template);
-        this.controller = new Controller(this.model, this.view);
+    function Main(name) {
+        this.storage = new TodoStore(name);
+        this.model = new TodoModel(this.storage);
+        this.template = new TodoTemplate();
+        this.view = new TodoView(this.template);
+        this.controller = new TodoController(this.model, this.view);
     }
 
-    var todo = new Todo("todo");
+    var main = new Main("todo");
 
     function setView() {
-        let hash = ''; 
-            if(location.hash.indexOf('#') != -1) {
-                hash = location.hash.split('#')[1];
-            } 
-        todo.controller.setView(hash);
+        main.controller.setView();
     }
 
     setView();

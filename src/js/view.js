@@ -1,7 +1,7 @@
-function View(template) {
+function View(template,main) {
     this.template = template;
 
-    this.$main = document.body;
+    this.$main = main;
     this.ENTER_KEY = 13;
     this.$todoList;
     this.$newTodo;
@@ -25,10 +25,10 @@ View.prototype._itemId = function (el) {
 
 View.prototype.renderMain = function () {
     this.$main.innerHTML = this.template.startTemplate;
-    this.$todoList = document.querySelector(".todo");
-    this.$newTodo = document.querySelector(".todo__input");
-    this.$itemCounter = document.querySelector(".todo__counter");
-    this.$removeCompleted = document.querySelector(".todo__completed");
+    this.$todoList = this.$main.querySelector(".todo");
+    this.$newTodo = this.$main.querySelector(".todo__input");
+    this.$itemCounter = this.$main.querySelector(".todo__counter");
+    this.$removeCompleted = this.$main.querySelector(".todo__completed");
 }
 
 View.prototype.renderFilter = function(filter) {

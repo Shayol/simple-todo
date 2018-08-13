@@ -63,6 +63,13 @@
     top: 0;
     left: 0;
 }
+.main-todo__edit-input {
+    position: absolute;
+    width: 100%;
+    display: none;
+    top: 0;
+    left: 0;
+}
 .todo__footer {
     display: flex;
     justify-items: baseline;
@@ -82,6 +89,15 @@
     outline: none;
 }
 .delete {
+    border-color: rgba(233, 90, 90, 0.548);
+    background-color: white;
+}
+.main-edit {
+    border-color: aliceblue;;
+    background-color: white;
+    outline: none;
+}
+.main-delete {
     border-color: rgba(233, 90, 90, 0.548);
     background-color: white;
 }
