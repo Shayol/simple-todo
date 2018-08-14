@@ -60,9 +60,12 @@ TodoStore.prototype.save = function (updateData, id) {
     return Promise.resolve(result);
 }
 
+//delete list and all todos it contains
 TodoStore.prototype.delete = function (id) {
     let data = JSON.parse(localStorage[this._dbname]);
     if (id && data[id]) {
+        let children_db = data[id].items_db;
+        localStorage.removeItem(children_db);
         delete data[id];
         localStorage[this._dbname] = JSON.stringify(data);
     }

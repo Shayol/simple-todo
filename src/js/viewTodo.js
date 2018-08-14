@@ -24,7 +24,7 @@ TodoView.prototype._itemId = function (el) {
 TodoView.prototype.renderMain = function () {
     this.$main.innerHTML = this.template.startTemplate;
     this.$todoList = document.querySelector(".main-todo");
-    this.$newTodo = document.querySelector(".main__input");
+    this.$newTodo = document.querySelector(".main-todo__input");
 }
 
 
@@ -33,7 +33,7 @@ TodoView.prototype.renderEntries = function (items) {
 }
 
 TodoView.prototype.getWrapper = function(id) {
-    let wrapper = this.$main.querySelector("[data-todoid='" + id + "'] .items-container");
+    let wrapper = this.$main.querySelector("[data-todoid='" + id + "'] .main-todo__items-container");
     return wrapper;
 }
 

@@ -1,13 +1,8 @@
 .container {
     width: 80%;
-    max-width: 645px;
+    max-width: 1045px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.main__input {
-    width: 100%;
-    border-radius: 5px;
 }
 
 .filters {
@@ -41,7 +36,6 @@
 
 .todo__input {
     display: block;
-    width: 100%;
     border-radius: 2px solid (101, 101, 219);
     padding: 5px 10px;
 }
@@ -53,15 +47,9 @@
     padding: 10px 0;
 }
 
-.main-todo {
-    list-style: none;
-    padding: 0;
-}
 
-.main-todo__item {
-    margin: 0 0 30px 0;
-    padding: 0;
-}
+
+
 
 .checked {
     opacity: 0.6;
@@ -72,21 +60,11 @@
     flex-grow: 1;
 }
 
-.main-todo__content {
-    position: relative;
-    flex-grow: 1;
-    font-size: 20px;
-    color: rgb(75, 63, 49);
-    font-weight: bold;
-}
-.main-todo__header {
-    display: flex;
-    margin-bottom: 20px;
+.todo__text {
+    height: 100%;
 }
 
-.main-todo__content:hover ~ .main-delete {
-    display: block;
-}
+
 
 .todo__edit-input {
     position: absolute;
@@ -95,13 +73,7 @@
     top: 0;
     left: 0;
 }
-.main-todo__edit-input {
-    position: absolute;
-    width: 100%;
-    display: none;
-    top: 0;
-    left: 0;
-}
+
 .todo__footer {
     display: flex;
     justify-items: baseline;
@@ -116,23 +88,11 @@
     font-size: 18px;
 }
 .edit {
-    border-color: aliceblue;;
-    background-color: white;
-    outline: none;
+    padding-right: 10px;
+    cursor: pointer;
 }
+
 .delete {
-    border-color: rgba(233, 90, 90, 0.548);
-    background-color: white;
-}
-.main-edit {
-    border-color: aliceblue;;
-    background-color: white;
-    outline: none;
-}
-.main-delete {
-    color: rgba(233, 90, 90, 0.548);
-    padding-right: 30px;
-    font-size: 20px;
-    line-height: 1;
-    display: none;
+    padding-left: 10px;
+    cursor: pointer;
 }

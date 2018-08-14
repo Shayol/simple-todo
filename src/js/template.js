@@ -20,10 +20,11 @@ function Template() {
     this.defaultTemplate = `<li class='todo__item {{checked-item}}' data-todoid='{{id}}'>
         <input type='checkbox' class='todo__fullfilled' {{checked}}> 
         <div class='todo__content'>
-            <span class='todo__text'> {{text}}  </span> 
+            <div class='todo__text'> {{text}}  </div> 
             <input class='todo__edit-input'></input>
         </div> 
-        <button class='edit'>Edit</button><button class='delete'>Delete</button></li>`;
+        <div class='edit'>&#9998;</div>
+        <div class='delete'>&#10005;</div></li>`;
 }
 
 Template.prototype.show = function (data) {
